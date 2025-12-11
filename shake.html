@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Shake Order Form - Kenneth Carman</title>
+    <style>
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        /* Reset & body */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: url("sha.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Overlay to make form readable */
+        .overlay {
+            background: rgba(255, 255, 255, 0.85);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            color: #fff;
+            text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        header p {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Form container */
+        .form-card {
+            background: rgba(255, 255, 255, 0.95);
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .form-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+        }
+
+        .form-card h2 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: 600;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.3s;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #ff6b6b;
+        }
+
+        input[type="submit"] {
+            background: #ff6b6b;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #ff4c4c;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            color: #fff;
+            font-weight: 500;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .form-card {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <header>
+            <h1>Ice Shake Order Form</h1>
+            <p>Refreshing shakes delivered to your doorstep!</p>
+        </header>
+
+        <div class="form-card">
+            <h2>Place Your Order</h2>
+            <form action="#" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="09XXXXXXXXX" required>
+
+                <label for="flavor">Shake Flavor</label>
+                <select id="flavor" name="flavor" required>
+                    <option value="">--Select Flavor--</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="mango">Mango</option>
+                    <option value="cookies">Cookies & Cream</option>
+                </select>
+
+                <label for="size">Shake Size</label>
+                <select id="size" name="size" required>
+                    <option value="">--Select Size--</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                <label for="message">Special Instructions</label>
+                <textarea id="message" name="message" rows="4" placeholder="E.g., add whipped cream"></textarea>
+
+                <input type="submit" value="Place Order">
+            </form>
+        </div>
+
+        <footer>
+            © 2025 Kenneth Carman — All rights reserved | Contact: 09456148308 | Email: kennethcarman51@gmail.com
+        </footer>
+    </div>
+</body>
+</html>

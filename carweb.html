@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenneth Carman Portfolio</title>
+    <style>
+        /* General styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+        header nav a:hover {
+            color: #f39c12;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Cards styling */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: transparent;
+            width: 250px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .card-front {
+            background: #3498db;
+            font-size: 1.2rem;
+        }
+
+        .card-back {
+            background: #f39c12;
+            transform: rotateY(180deg);
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        /* Gallery images */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-container img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact form */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            background: #3498db;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background: #f39c12;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>Kenneth Carman</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section id="home" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:40px 20px;">
+    <div style="text-align:center; margin-bottom:20px;">
+        <img src="carpic1.jpg" alt="Kenneth Carman" style="border-radius:50%; object-fit:cover; width:120px; height:120px;">
+    </div>
+    <div style="text-align:center;">
+        <h1 style="font-family:'Pacifico', cursive; color:#6b4f4f; margin-bottom:10px; font-size:1.8rem;">Kenneth Carman</h1>
+        <p style="color:#5a463c; font-size:1rem;">
+            Welcome to my website. I am Kenneth Carman, a passionate developer and designer. Explore my work below and feel free to get in touch!
+        </p>
+    </div>
+</section>
+
+
+<section id="projects">
+  <h2 style="text-align:center; margin-bottom:40px; color:#6b4f4f; font-family:'Playfair Display', serif;">Projects</h2>
+  <div class="card-container" style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+
+    <!-- Project 1 -->
+    <div class="card" style="background-color:transparent; width:250px; height:300px; perspective:1000px; cursor:pointer;" onclick="location.href='carstory.html'">
+      <div class="card-inner" style="position:relative; width:100%; height:100%; text-align:center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div class="card-front" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#3498db; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border-radius:12px;">
+          STORY OF THE BOOK
+        </div>
+        <div class="card-back" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#2980b9; color:#fff; transform: rotateY(180deg); font-size:1rem; padding:15px; display:flex; align-items:center; justify-content:center; border-radius:12px;">
+          Click to open STORY OF THE BOOK
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card" style="background-color:transparent; width:250px; height:300px; perspective:1000px; cursor:pointer;" onclick="location.href='ginataan.html'">
+      <div class="card-inner" style="position:relative; width:100%; height:100%; text-align:center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div class="card-front" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#2ecc71; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border-radius:12px;">
+          GINATAANG LANGKA RECIPE
+        </div>
+        <div class="card-back" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#27ae60; color:#fff; transform: rotateY(180deg); font-size:1rem; padding:15px; display:flex; align-items:center; justify-content:center; border-radius:12px;">
+          Click to open GINATAANG LANGKA
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card" style="background-color:transparent; width:250px; height:300px; perspective:1000px; cursor:pointer;" onclick="location.href='shake.html'">
+      <div class="card-inner" style="position:relative; width:100%; height:100%; text-align:center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div class="card-front" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#e74c3c; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border-radius:12px;">
+          ICE SHAKE ORDER FORM
+        </div>
+        <div class="card-back" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#c0392b; color:#fff; transform: rotateY(180deg); font-size:1rem; padding:15px; display:flex; align-items:center; justify-content:center; border-radius:12px;">
+          Click to open ICE SHAKE
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="card" style="background-color:transparent; width:250px; height:300px; perspective:1000px; cursor:pointer;" onclick="location.href='bike.html'">
+      <div class="card-inner" style="position:relative; width:100%; height:100%; text-align:center; transition: transform 0.8s; transform-style: preserve-3d;">
+        <div class="card-front" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#9b59b6; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; border-radius:12px;">
+          BIKE
+        </div>
+        <div class="card-back" style="position:absolute; width:100%; height:100%; backface-visibility:hidden; background:#8e44ad; color:#fff; transform: rotateY(180deg); font-size:1rem; padding:15px; display:flex; align-items:center; justify-content:center; border-radius:12px;">
+          Click to open BIKE
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Card flip on hover
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.querySelector('.card-inner').style.transform = 'rotateY(0deg)';
+      });
+    });
+  </script>
+</section>
+
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+        <img src="friend1.JPG" alt="Gallery Image N">
+        <img src="friend2.JPG" alt="Gallery Image B">
+        <img src="friend3.JPG" alt="Gallery Image H">
+        <img src="friend4.JPG" alt="Gallery Image D">
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    &copy; 2025 Kenneth Carman | Email: 9456148308 | Email: kennethcarman51@gmail.com
+</footer>
+
+</body>
+</html>
